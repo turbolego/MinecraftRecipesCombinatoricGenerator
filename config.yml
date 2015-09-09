@@ -1,0 +1,7 @@
+version: 1.6.0
+build: '0602'
+UpdateItems: true
+AbilitiesData:
+  Poison_Duration: 200
+  Disorient_Duration: 800
+  Blind_Duration: 1000
