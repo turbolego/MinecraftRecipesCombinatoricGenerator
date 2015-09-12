@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-from itertools import combinations_with_replacement
+from itertools import product
 
-i = 0;
+i = 7000;
 
 
-alphabets = ['260', '391', '280', '366', '350', '349', '424', '111', '320', '40']
+alphabets = ['260', '391', '280', '366', '350', '349', '424', '111', '320', '360']
+#alphabets = ['280', '366', '350', '349', '424', '111', '320', '360']
+#alphabets = ['391', '280', '366', '349', '111', '320', '360']
 
 id1 = 260; #eple
 id2 = 391; #gulerot
@@ -17,7 +19,7 @@ id6 = 349; #laks
 id7 = 424; #lam
 id8 = 111; #spinat
 id9 = 320; #gris
-id10 = 40; #tomat
+id10 = 360; #tomat
 
 #Eple = 260
 EpleCal = 91;
@@ -136,7 +138,7 @@ PorkKalsium = 1;
 PorkJern = 10;
 PorkSalt = 2100;
 
-#Tomat = 40
+#Tomat = 360
 TomatCal = 111;
 TomatCarbo = 18;
 TomatFat = 3;
@@ -162,9 +164,14 @@ fo3 = open("test/items.txt", "a")
 fo3.write('Items:\n');
 
 
-for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
+#for (a,b,c,d,e,f) in permutations(alphabets, 6):
+for (a,b,c) in product(alphabets, repeat=3):
+
 	fo = open("recipes/recipes.txt", "a")
 	s = str(i)
+	d = '360'
+	e = '360'
+	f = '360'
 	fo.write('  Pizza'+s+':\n'+'    \'1\': '+a+'\n'+'    \'2\': '+b+'\n'+'    \'3\': '+c+'\n'+'    \'4\': '+d+'\n'+'    \'5\': '+e+'\n'+'    \'6\': '+f+'\n'+'    \'7\': '+'296'+'\n'+'    \'8\': '+'296'+'\n'+'    \'9\': '+'296'+'\n');
 	print (s + ':' + a + ' '+ b + ' '+ c + ' '+ d + ' '+ e + ' '+ f);
 
@@ -212,18 +219,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 
 #######SLOT1
 	
-	if (eple == slot1):
-		Cal += 91; #eple
-		Karbo += 23;
-		Fat += 1;
-		Protein += 0;
-		Fiber += 4;
-		Sukker += 19;
-		Cvita += 1;
-		Avita += 2;
-		Kalsium += 1;
-		Jern += 2;
-		Salt += 2;
+	# if (eple == slot1):
+		# Cal += 91; #eple
+		# Karbo += 23;
+		# Fat += 1;
+		# Protein += 0;
+		# Fiber += 4;
+		# Sukker += 19;
+		# Cvita += 1;
+		# Avita += 2;
+		# Kalsium += 1;
+		# Jern += 2;
+		# Salt += 2;
 	if (carrot == slot1):
 		Cal += 27; #carrot
 		Karbo += 6;
@@ -260,18 +267,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 8;
 		Salt += 87;
-	if (ansjos == slot1):
-		Cal += 42; #ansjos
-		Karbo += 0;
-		Fat += 2;
-		Protein += 6;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 5;
-		Jern += 5;
-		Salt+= 733;
+	# if (ansjos == slot1):
+		# Cal += 42; #ansjos
+		# Karbo += 0;
+		# Fat += 2;
+		# Protein += 6;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 5;
+		# Jern += 5;
+		# Salt+= 733;
 	if (laks == slot1):
 		Cal += 280; #laks
 		Karbo += 0;
@@ -284,18 +291,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 9;
 		Salt += 86;
-	if (lam == slot1):
-		Cal += 297; #lam
-		Karbo += 0;
-		Fat +=  9;
-		Protein += 49;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 3;
-		Jern += 19;
-		Salt += 180;
+	# if (lam == slot1):
+		# Cal += 297; #lam
+		# Karbo += 0;
+		# Fat +=  9;
+		# Protein += 49;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 3;
+		# Jern += 19;
+		# Salt += 180;
 	if (spinat == slot1):
 		Cal += 8; #spinat
 		Karbo += 1;
@@ -336,18 +343,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 #######SLOT2
 
 
-	if (eple == slot2):
-		Cal += 91; #eple
-		Karbo += 23;
-		Fat += 1;
-		Protein += 0;
-		Fiber += 4;
-		Sukker += 19;
-		Cvita += 1;
-		Avita += 2;
-		Kalsium += 1;
-		Jern += 2;
-		Salt += 2;
+	# if (eple == slot2):
+		# Cal += 91; #eple
+		# Karbo += 23;
+		# Fat += 1;
+		# Protein += 0;
+		# Fiber += 4;
+		# Sukker += 19;
+		# Cvita += 1;
+		# Avita += 2;
+		# Kalsium += 1;
+		# Jern += 2;
+		# Salt += 2;
 	if (carrot == slot2):
 		Cal += 27; #carrot
 		Karbo += 6;
@@ -384,18 +391,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 8;
 		Salt += 87;
-	if (ansjos == slot2):
-		Cal += 42; #ansjos
-		Karbo += 0;
-		Fat += 2;
-		Protein += 6;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 5;
-		Jern += 5;
-		Salt+= 733;
+	# if (ansjos == slot2):
+		# Cal += 42; #ansjos
+		# Karbo += 0;
+		# Fat += 2;
+		# Protein += 6;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 5;
+		# Jern += 5;
+		# Salt+= 733;
 	if (laks == slot2):
 		Cal += 280; #laks
 		Karbo += 0;
@@ -408,18 +415,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 9;
 		Salt += 86;
-	if (lam == slot2):
-		Cal += 297; #lam
-		Karbo += 0;
-		Fat +=  9;
-		Protein += 49;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 3;
-		Jern += 19;
-		Salt += 180;
+	# if (lam == slot2):
+		# Cal += 297; #lam
+		# Karbo += 0;
+		# Fat +=  9;
+		# Protein += 49;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 3;
+		# Jern += 19;
+		# Salt += 180;
 	if (spinat == slot2):
 		Cal += 8; #spinat
 		Karbo += 1;
@@ -460,18 +467,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 #######SLOT3
 
 
-	if (eple == slot3):
-		Cal += 91; #eple
-		Karbo += 23;
-		Fat += 1;
-		Protein += 0;
-		Fiber += 4;
-		Sukker += 19;
-		Cvita += 1;
-		Avita += 2;
-		Kalsium += 1;
-		Jern += 2;
-		Salt += 2;
+	# if (eple == slot3):
+		# Cal += 91; #eple
+		# Karbo += 23;
+		# Fat += 1;
+		# Protein += 0;
+		# Fiber += 4;
+		# Sukker += 19;
+		# Cvita += 1;
+		# Avita += 2;
+		# Kalsium += 1;
+		# Jern += 2;
+		# Salt += 2;
 	if (carrot == slot3):
 		Cal += 27; #carrot
 		Karbo += 6;
@@ -508,18 +515,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 8;
 		Salt += 87;
-	if (ansjos == slot3):
-		Cal += 42; #ansjos
-		Karbo += 0;
-		Fat += 2;
-		Protein += 6;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 5;
-		Jern += 5;
-		Salt+= 733;
+	# if (ansjos == slot3):
+		# Cal += 42; #ansjos
+		# Karbo += 0;
+		# Fat += 2;
+		# Protein += 6;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 5;
+		# Jern += 5;
+		# Salt+= 733;
 	if (laks == slot3):
 		Cal += 280; #laks
 		Karbo += 0;
@@ -532,18 +539,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 9;
 		Salt += 86;
-	if (lam == slot3):
-		Cal += 297; #lam
-		Karbo += 0;
-		Fat +=  9;
-		Protein += 49;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 3;
-		Jern += 19;
-		Salt += 180;
+	# if (lam == slot3):
+		# Cal += 297; #lam
+		# Karbo += 0;
+		# Fat +=  9;
+		# Protein += 49;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 3;
+		# Jern += 19;
+		# Salt += 180;
 	if (spinat == slot3):
 		Cal += 8; #spinat
 		Karbo += 1;
@@ -584,18 +591,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 #######SLOT4
 
 
-	if (eple == slot4):
-		Cal += 91; #eple
-		Karbo += 23;
-		Fat += 1;
-		Protein += 0;
-		Fiber += 4;
-		Sukker += 19;
-		Cvita += 1;
-		Avita += 2;
-		Kalsium += 1;
-		Jern += 2;
-		Salt += 2;
+	# if (eple == slot4):
+		# Cal += 91; #eple
+		# Karbo += 23;
+		# Fat += 1;
+		# Protein += 0;
+		# Fiber += 4;
+		# Sukker += 19;
+		# Cvita += 1;
+		# Avita += 2;
+		# Kalsium += 1;
+		# Jern += 2;
+		# Salt += 2;
 	if (carrot == slot4):
 		Cal += 27; #carrot
 		Karbo += 6;
@@ -632,18 +639,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 8;
 		Salt += 87;
-	if (ansjos == slot4):
-		Cal += 42; #ansjos
-		Karbo += 0;
-		Fat += 2;
-		Protein += 6;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 5;
-		Jern += 5;
-		Salt+= 733;
+	# if (ansjos == slot4):
+		# Cal += 42; #ansjos
+		# Karbo += 0;
+		# Fat += 2;
+		# Protein += 6;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 5;
+		# Jern += 5;
+		# Salt+= 733;
 	if (laks == slot4):
 		Cal += 280; #laks
 		Karbo += 0;
@@ -656,18 +663,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 9;
 		Salt += 86;
-	if (lam == slot4):
-		Cal += 297; #lam
-		Karbo += 0;
-		Fat +=  9;
-		Protein += 49;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 3;
-		Jern += 19;
-		Salt += 180;
+	# if (lam == slot4):
+		# Cal += 297; #lam
+		# Karbo += 0;
+		# Fat +=  9;
+		# Protein += 49;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 3;
+		# Jern += 19;
+		# Salt += 180;
 	if (spinat == slot4):
 		Cal += 8; #spinat
 		Karbo += 1;
@@ -708,18 +715,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 #######SLOT5
 
 
-	if (eple == slot5):
-		Cal += 91; #eple
-		Karbo += 23;
-		Fat += 1;
-		Protein += 0;
-		Fiber += 4;
-		Sukker += 19;
-		Cvita += 1;
-		Avita += 2;
-		Kalsium += 1;
-		Jern += 2;
-		Salt += 2;
+	# if (eple == slot5):
+		# Cal += 91; #eple
+		# Karbo += 23;
+		# Fat += 1;
+		# Protein += 0;
+		# Fiber += 4;
+		# Sukker += 19;
+		# Cvita += 1;
+		# Avita += 2;
+		# Kalsium += 1;
+		# Jern += 2;
+		# Salt += 2;
 	if (carrot == slot5):
 		Cal += 27; #carrot
 		Karbo += 6;
@@ -756,18 +763,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 8;
 		Salt += 87;
-	if (ansjos == slot5):
-		Cal += 42; #ansjos
-		Karbo += 0;
-		Fat += 2;
-		Protein += 6;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 5;
-		Jern += 5;
-		Salt+= 733;
+	# if (ansjos == slot5):
+		# Cal += 42; #ansjos
+		# Karbo += 0;
+		# Fat += 2;
+		# Protein += 6;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 5;
+		# Jern += 5;
+		# Salt+= 733;
 	if (laks == slot5):
 		Cal += 280; #laks
 		Karbo += 0;
@@ -780,18 +787,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 9;
 		Salt += 86;
-	if (lam == slot5):
-		Cal += 297; #lam
-		Karbo += 0;
-		Fat +=  9;
-		Protein += 49;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 3;
-		Jern += 19;
-		Salt += 180;
+	# if (lam == slot5):
+		# Cal += 297; #lam
+		# Karbo += 0;
+		# Fat +=  9;
+		# Protein += 49;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 3;
+		# Jern += 19;
+		# Salt += 180;
 	if (spinat == slot5):
 		Cal += 8; #spinat
 		Karbo += 1;
@@ -832,18 +839,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 #######SLOT6
 
 
-	if (eple == slot6):
-		Cal += 91; #eple
-		Karbo += 23;
-		Fat += 1;
-		Protein += 0;
-		Fiber += 4;
-		Sukker += 19;
-		Cvita += 1;
-		Avita += 2;
-		Kalsium += 1;
-		Jern += 2;
-		Salt += 2;
+	# if (eple == slot6):
+		# Cal += 91; #eple
+		# Karbo += 23;
+		# Fat += 1;
+		# Protein += 0;
+		# Fiber += 4;
+		# Sukker += 19;
+		# Cvita += 1;
+		# Avita += 2;
+		# Kalsium += 1;
+		# Jern += 2;
+		# Salt += 2;
 	if (carrot == slot6):
 		Cal += 27; #carrot
 		Karbo += 6;
@@ -880,18 +887,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 8;
 		Salt += 87;
-	if (ansjos == slot6):
-		Cal += 42; #ansjos
-		Karbo += 0;
-		Fat += 2;
-		Protein += 6;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 5;
-		Jern += 5;
-		Salt+= 733;
+	# if (ansjos == slot6):
+		# Cal += 42; #ansjos
+		# Karbo += 0;
+		# Fat += 2;
+		# Protein += 6;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 5;
+		# Jern += 5;
+		# Salt+= 733;
 	if (laks == slot6):
 		Cal += 280; #laks
 		Karbo += 0;
@@ -904,18 +911,18 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 		Kalsium += 2;
 		Jern += 9;
 		Salt += 86;
-	if (lam == slot6):
-		Cal += 297; #lam
-		Karbo += 0;
-		Fat +=  9;
-		Protein += 49;
-		Fiber += 0;
-		Sukker += 0;
-		Cvita += 0;
-		Avita +=  0;
-		Kalsium += 3;
-		Jern += 19;
-		Salt += 180;
+	# if (lam == slot6):
+		# Cal += 297; #lam
+		# Karbo += 0;
+		# Fat +=  9;
+		# Protein += 49;
+		# Fiber += 0;
+		# Sukker += 0;
+		# Cvita += 0;
+		# Avita +=  0;
+		# Kalsium += 3;
+		# Jern += 19;
+		# Salt += 180;
 	if (spinat == slot6):
 		Cal += 8; #spinat
 		Karbo += 1;
@@ -973,7 +980,7 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 	fo2.write('- Pizza'+s+'\n');
 	
 	fo3 = open("test/Items.txt", "a")
-	fo3.write('  Pizza'+s+':\n'+'    ID: 281\n'+'    DisplayName: Pizza'+s+'\n'+'    UsePermission: false\n'+'    Abilities:\n'+'    - Teleport\n'+'    Lore:\n');
+	fo3.write('  Pizza'+s+':\n'+'    ID: 281\n'+'    DisplayName: Pizza'+s+'\n'+'    UsePermission: false\n'+'    Abilities:\n'+'    - SuperFortune\n'+'    Lore:\n');
 
 	
 	
@@ -990,7 +997,7 @@ for (a,b,c,d,e,f) in combinations_with_replacement(alphabets, 6):
 	fo3.write('    - '+JernSTR+' prosent jern\n');
 
 	
-	fo3.write('    Color: §a\n'+'    UseRecipe: true\n'+'    UseCustom: true\n');
+	fo3.write('    Color: ยงa\n'+'    UseRecipe: true\n'+'    UseCustom: true\n');
 	i += 1;
 	fo.close()
 	fo2.close()
