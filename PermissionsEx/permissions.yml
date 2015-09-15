@@ -1,0 +1,43 @@
+groups:
+  default:
+    options:
+      default: true
+    permissions:
+    - modifyworld.items.have.*
+    - modifyworld.items.drop.*
+    - modifyworld.items.pickup.*
+    - modifyworld.items.craft.*
+    - modifyworld.blocks.interact.58:?*
+    - modifyworld.blocks.interact.281:?*
+    - modifyworld.blocks.craft.281:?*
+    - modifyworld.blocks.pickup.281:?*
+    - modifyworld.blocks.interact.(64|77|96|70|72|69|143|58|281):?*
+    - modifyworld.blocks.place.(260|296|281):?*
+    - modifyworld.blocks.break.(260|296|281):?*
+    - modifyworld.blocks.interact.(260|296|281):?*
+    - modifyworld.blocks.craft.(260|296|281):?*
+    - modifyworld.blocks.pickup.(260|296|281):?*
+    - modifyworld.blocks.drop.(260|296|281):?*
+schema-version: 1
+users:
+  8cdd3c3c-f3ef-48e3-9337-f9ade24beb6d:
+    worlds:
+      start:
+        permissions:
+        - modifyworld.items.have.*
+        - modifyworld.items.drop.*
+        - modifyworld.items.pickup.*
+        - modifyworld.items.craft.*
+        - modifyworld.blocks.interact.58:?*
+        - modifyworld.blocks.interact.281:?*
+        - modifyworld.blocks.craft.281:?*
+        - modifyworld.blocks.pickup.281:?*
+        - modifyworld.blocks.interact.(64|77|96|70|72|69|143|58|281):?*
+        - modifyworld.blocks.place.(260|296|281):?*
+        - modifyworld.blocks.break.(260|296|281):?*
+        - modifyworld.blocks.interact.(260|296|281):?*
+        - modifyworld.blocks.craft.(260|296|281):?*
+        - modifyworld.blocks.pickup.(260|296|281):?*
+        - modifyworld.blocks.drop.(260|296|281):?*
+    options:
+      name: Turbolego
